@@ -29,6 +29,21 @@ There's a bug in the litellm package, there's an open PR for it but to solve it 
 PR: https://github.com/BerriAI/litellm/pull/10917/files
 File path: .venv/lib/python3.12/site-packages/litellm/litellm_core_utils/prompt_templates/factory.py
 
+## LLM
+You can use whatever LLM model you prefer, you just need to update the self.llm variable to initialise the correct model
+
+```python
+self.llm = LLM(
+    model="ollama/qwen2.5:latest",
+    base_url="http://localhost:11434",
+    api_key="ollama",  # dummy value
+    # temperature=0.1,
+)
+```
+
+To use the default llm, make sure before running the project to:
+1. Install Ollama: [ollama.ai](https://ollama.com/)
+2. In a terminal, run the model: ollama run qwen2.5:latest
 
 ## Running the Project
 
