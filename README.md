@@ -53,6 +53,12 @@ To start the FAST api project, run this from the root folder of your project:
 uvicorn app.main:app --reload
 ```
 
-thorugh postman connect to the websocket endpoint, every 15 minutes a recommendatino will be broadcasted to all clients connected on it.
+Thorugh postman connect to the websocket endpoint, every 15 minutes a recommendatino will be broadcasted to all clients connected on it. </br>
+To update the 15 minutes value, update this:
+
+```python
+scheduler.add_job(websocket.periodic_task, "interval", minutes=60) # change to: seconds=60
+```
+But make sure to not put a short interval, as with each job the ai flow will be called so that might call your model before the previous flow is finished.
 
 Endpoint: ws://127.0.0.1:8000/ws/get-decision
