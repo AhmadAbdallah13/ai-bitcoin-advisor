@@ -1,6 +1,6 @@
 # Bitcoin Trading Advisor Crew
 
-Welcome to the Bitcoin Trading Advisor Crew project, powered by [crewAI](https://crewai.com) and [Fast API](https://fastapi.tiangolo.com/). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+Welcome to the Bitcoin Trading Advisor Crew project, powered by [crewAI](https://crewai.com) and [Fast API](https://fastapi.tiangolo.com/). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI.
 
 ## Installation
 
@@ -25,9 +25,9 @@ uv pip install -r requirements.txt
 ```
 
 ## Using Ollama with Crewai
-There's a bug in the litellm package, there's an open PR for it but to solve it for now make the fix manually
-PR: https://github.com/BerriAI/litellm/pull/10917/files
-File path: .venv/lib/python3.12/site-packages/litellm/litellm_core_utils/prompt_templates/factory.py
+There's a bug in the litellm package, there's an open PR for it but to solve it for now make the fix manually. <br />
+PR: https://github.com/BerriAI/litellm/pull/10917/files <br />
+File path: .venv/lib/python3.12/site-packages/litellm/litellm_core_utils/prompt_templates/factory.py <br />
 
 ## LLM
 You can use whatever LLM model you prefer, you just need to update the self.llm variable to initialise the correct model
